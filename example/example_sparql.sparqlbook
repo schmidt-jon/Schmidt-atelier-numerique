@@ -1,0 +1,14 @@
+[
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "select (count(*) as ?number)\r\nwhere {\r\ndbr:List_of_archaeologists dbo:wikiPageWikiLink ?s.\r\n?s a dbo:Person\r\n}\r\nLIMIT 100",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "select ?s\r\nwhere {\r\ndbr:List_of_archaeologists dbo:wikiPageWikiLink ?s.\r\n?s a dbo:Person\r\n}\r\nLIMIT 100",
+    "metadata": {}
+  }
+]
