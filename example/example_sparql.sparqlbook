@@ -10,5 +10,11 @@
     "language": "sparql",
     "value": "select ?s\r\nwhere {\r\ndbr:List_of_archaeologists dbo:wikiPageWikiLink ?s.\r\n?s a dbo:Person\r\n}\r\nLIMIT 100",
     "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "PREFIX dbr: <http://dbpedia.org/resource/>\r\nPREFIX dbo: <http://dbpedia.org/ontology/>\r\nSELECT ?p1 (COUNT(*) as ?eff) \r\nWHERE { \r\ndbr:List_of_archaeologists ?p ?o1.\r\n?o1 a dbo:Person;\r\n    ?p1 ?o2.\r\n  }\r\nGROUP BY ?p1\r\nORDER BY DESC(?eff)",
+    "metadata": {}
   }
 ]
